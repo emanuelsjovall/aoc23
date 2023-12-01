@@ -16,8 +16,7 @@ swap = {"one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "six": "
 
 res = 0
 for line in lines:
-    f = []
-    l = []
+    f, l = [], []
     nums = [n for n in "".join(re.findall(r'[0-9]+', line))] # make all the 456 into 4, 5, 6 
     for n in nums:
         heapq.heappush(f, (line.find(n), n))
